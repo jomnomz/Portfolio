@@ -2,18 +2,19 @@
     display: flex;
     flex-direction: column;
     align-items: center;
+    overflow-x: hidden;
 }
     
 .imgAndIconSectionContainer{
     display: flex;
     flex-direction: row;
     align-items: center;
-    /* margin-left: 1.5rem; */
+    max-width: 100%;
 }
 
 .headerTitle{
     margin-bottom: 2rem;
-    /* margin-left: 1.5rem; */
+    font-size: 2rem;
 }
 
 .imgAndIconContainer{
@@ -21,9 +22,6 @@
     align-items: center;
     justify-content: center;
     
-}
-.headerTitle{
-    font-size: 2rem;
 }
 
 .imgContainer{
@@ -42,10 +40,9 @@
 }
 
 .footer{
-    background-color: #cacaf4;
-    color: black;
-    font-weight: bold;
-    font-size: 1.5rem;
+    background-color: #366286;
+    color: rgb(255, 255, 255);
+    font-size: 0.7rem;
     width: 100%;
     height: 7rem;
     margin-top: 5rem;
@@ -54,4 +51,29 @@
 .text{
     margin-top: 1rem;
     margin-left: 1rem;
+}
+
+/* larger phones */
+@media screen and (min-width: 576px){
+
+}
+
+/* Tablets / portrait */
+@media screen and (min-width: 768px){
+
+}
+
+/* Small laptops / landscape tablets */
+@media screen and (min-width: 992px){
+    .footer{
+        font-size: 1.2rem;
+    }
+}
+/* Desktops */
+@media screen and (min-width: 1200px){
+
+}
+/* Large desktops / wide monitors */
+@media screen and (min-width: 1400px){
+
 }

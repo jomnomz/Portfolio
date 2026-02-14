@@ -4,16 +4,20 @@ import css from '../../../assets/css.png'
 import HTML from '../../../assets/HTML.png'
 import javaScript from '../../../assets/javaScript.png'
 import react from '../../../assets/react.svg'
+import nodeJs from '../../../assets/nodeJs.png'
+import node from '../../../assets/node.png'
+import expressJs from '../../../assets/expressJs.png'
+import supabase from '../../../assets/supabase.png'
 
 export default function TechStack({ scrollProgress }) {
     const techStack = [
-        { name: 'React/React Native', color: '#ADC1C2', icon: react },
-        { name: 'Node.js', color: '#91ACC8', icon: '🟢' },
-        { name: 'Express', color: '#6A7D93', icon: '⚡' },
-        { name: 'Supabase', color: '#CFCDA2', icon: javaScript },
+        { name: 'React/React Native', color: '#6A7D93', icon: react },
+        { name: 'Node.js', color: '#A8C5B4', icon: node },
+        { name: 'Express', color: '#9BA5AB', icon: expressJs },
+        { name: 'Supabase', color: '#607F83', icon: supabase },
         { name: 'JavaScript', color: '#CFCDA2', icon: javaScript },
-        { name: 'HTML', color: '#6F779D', icon: HTML },
-        { name: 'CSS', color: '#607F83', icon: css },
+        { name: 'HTML', color: '#BFA18A', icon: HTML },
+        { name: 'CSS', color: '#91ACC8', icon: css },
     ]
 
     return (

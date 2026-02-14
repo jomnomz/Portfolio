@@ -28,33 +28,41 @@ function App() {
 }
 
   useEffect(() => {
-    const handleScroll = () => {
-      const sections = [
-        { name: 'home', ref: homeRef },
-        { name: 'about', ref: aboutRef },
-        { name: 'projects', ref: projectsRef },
-        { name: 'contact', ref: contactRef }
-      ];
+  const handleScroll = () => {
+    const sections = [
+      { name: 'home', ref: homeRef },
+      { name: 'about', ref: aboutRef },
+      { name: 'projects', ref: projectsRef },
+      { name: 'contact', ref: contactRef }
+    ];
 
-      const scrollPosition = window.scrollY + window.innerHeight / 2;
+    // Check from bottom to top to prioritize lower sections
+    const scrollPosition = window.scrollY + window.innerHeight / 2;
 
-      for (const section of sections) {
-        const element = section.ref.current;
-        if (element) {
-          const { offsetTop, offsetHeight } = element;
-          if (scrollPosition >= offsetTop && scrollPosition < offsetTop + offsetHeight) {
-            setActiveSection(section.name);
-            break;
-          }
+    // Special case: if we're near the bottom of the page, set to contact
+    if (window.innerHeight + window.scrollY >= document.documentElement.scrollHeight - 100) {
+      setActiveSection('contact');
+      return;
+    }
+
+    for (let i = sections.length - 1; i >= 0; i--) {
+      const section = sections[i];
+      const element = section.ref.current;
+      if (element) {
+        const { offsetTop } = element;
+        if (scrollPosition >= offsetTop) {
+          setActiveSection(section.name);
+          break;
         }
       }
-    };
+    }
+  };
 
-    window.addEventListener('scroll', handleScroll);
-    handleScroll(); 
+  window.addEventListener('scroll', handleScroll);
+  handleScroll(); 
 
-    return () => window.removeEventListener('scroll', handleScroll);
-  }, []);
+  return () => window.removeEventListener('scroll', handleScroll);
+}, []);
 
   return (
     <div className="App">

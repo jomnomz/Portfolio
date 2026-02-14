@@ -15,8 +15,8 @@
 
 .book {
     position: relative;
-    width: 300px;
-    height: 60px;
+    width: 280px;
+    height: 55px;
     display: flex;
     border-radius: 3px;
     box-shadow: 
@@ -190,4 +190,31 @@
         transparent 100%
     );
     z-index: -1;
+}
+
+
+/* larger phones */
+@media screen and (min-width: 576px){
+
+}
+
+/* Tablets / portrait */
+@media screen and (min-width: 768px){
+
+}
+
+/* Small laptops / landscape tablets */
+@media screen and (min-width: 992px){
+    .book {
+        width: 300px;
+        height: 60px;
+    }
+}
+/* Desktops */
+@media screen and (min-width: 1200px){
+
+}
+/* Large desktops / wide monitors */
+@media screen and (min-width: 1400px){
+
 }

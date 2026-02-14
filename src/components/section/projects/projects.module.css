@@ -1,7 +1,38 @@
 .bookContainer{
-    margin-left: 2rem;
+    padding: 4rem 2rem 2rem 2rem;
     display: flex;
-    flex-direction: row;
+    flex-direction: column; 
     align-items: center;
     justify-content: center;
+    overflow: hidden;
+    width: 100%;
+    box-sizing: border-box;
+
+}
+
+/* larger phones */
+@media screen and (min-width: 576px){
+
+}
+
+/* Tablets / portrait */
+@media screen and (min-width: 768px){
+
+}
+
+/* Small laptops / landscape tablets */
+@media screen and (min-width: 992px){
+    .bookContainer{
+        flex-direction: row; /* Row on desktop */
+    }
+}
+/* Desktops */
+@media screen and (min-width: 1200px){
+    .bookContainer{
+        flex-direction: row; /* Row on desktop */
+    }
+}   
+/* Large desktops / wide monitors */
+@media screen and (min-width: 1400px){
+
 }

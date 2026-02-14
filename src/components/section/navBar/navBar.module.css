@@ -12,7 +12,7 @@
     height: 3rem;
     position: fixed;
     top: 2rem;
-    left: 3rem;
+    left: 1.8rem;
 }
 
 .sectionsContainer{
@@ -147,6 +147,14 @@
 @media screen and (min-width: 992px){
     .sectionsContainer{
         display: flex;
+    }
+
+    .navDropDown{
+        display: none;
+    }
+
+    .logoContainer{
+        left: 3rem;
     }
 }
 /* Desktops */

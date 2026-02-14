@@ -25,34 +25,35 @@
 }
 
 
-.qrLogin{
+.img{
     width: 100%;
     height: 100%;
     border-radius: 3%;
 }
 
-.pageTitle{
+.pageTitle{ 
     position: absolute;
-    top: 120px;
-    font-size: 1.5rem;
-    left: 30px;
-    right: 30px;
+    top: 80px;
+    font-size: 1rem;
+    left: 20px;
+    right: 20px;
     text-align: center;
 }
 
-.qrLoginContainer{
+.imgContainer{
     width: 85%;
     height: 30%;
     position: absolute;
-    top: 210px;
-    left: 30px;
+    top: 140px;
+    left: 20px;
     pointer-events: auto;
 }
 
 ul{
     position: absolute;
-    top: 80px;
-    margin-right: 30px;
+    margin-right: 30px; 
+    top: 60px;
+    font-size: 0.7rem;
 }
 
 li{
@@ -62,9 +63,9 @@ li{
 
 .scotchTape1{
     position: absolute;
-    right: -30px;
+    right: -20px;
     top: -10px;
-    width: 30%;
+    width: 20%;
     height: 20%;
     transform: rotate(20deg);
     z-index: 1;
@@ -72,8 +73,8 @@ li{
 
 .scotchTape2{
     position: absolute;
-    left: -50px;
-    bottom: -20px;
+    left: -20px;
+    bottom: 5px;
     width: 30%;
     height: 25%;
     transform: rotate(50deg);
@@ -82,9 +83,9 @@ li{
 
 .scotchTape3{
     position: absolute;
-    left: -35px;
+    left: -15px;
     top: -10px;
-    width: 25%;
+    width: 20%;
     height: 30%;
     transform: rotate(-20deg);
     z-index: 1;
@@ -92,9 +93,9 @@ li{
 
 .scotchTape4{
     position: absolute;
-    right: -50px;
-    bottom: -20px;
-    width: 30%;
+    right: -20px;
+    bottom: 0px;
+    width: 20%;
     height: 25%;
     transform: rotate(-50deg);
     z-index: 1;
@@ -102,7 +103,7 @@ li{
 
 
 .cover{
-    background-color: #366286;
+    background-color: #6B7F95;
     color: rgb(245, 239, 239);
     border-radius: 1% 3% 3% 1%;
     display: flex;
@@ -113,8 +114,50 @@ li{
 }
 
 .coverTitle{
-    font-size: 4rem;
-    text-align: center;
+    font-size: 2.5rem;
+    position: absolute;
+    top: 40px;
+    left: 60px;
+}
+
+.projectsTitle {
+    font-size: 3rem;
+    position: absolute;
+    top: 55px;
+    left: 50px;
+    transform: rotate(-3deg);
+    background: linear-gradient(
+        to bottom,
+        transparent 60%,
+        #FFE66D 60%,
+        #FFE66D 85%,
+        transparent 85%
+    );
+    display: inline-block;
+    padding: 0 10px;
+}
+
+.projectsText {
+    font-size: 0.9rem;
+    position: absolute;
+    top: 140px;
+    left: 22px;
+}
+
+.stickyNotes{
+    position: absolute;
+    top: 250px;
+    left: 40px;
+    width: 70%;
+    height: 45%;
+}
+
+.stickyNotesText{
+    font-size: 0.8rem;
+    transform: rotate(2deg);
+    position: absolute;
+    top: 320px;
+    left: 100px;
 }
 
 .pageContent {
@@ -125,4 +168,92 @@ li{
     display: flex;
     flex-direction: column;
     gap: 1rem; 
+}
+
+/* larger phones */
+@media screen and (min-width: 576px){
+
+}
+
+/* Tablets / portrait */
+@media screen and (min-width: 768px){
+
+}
+
+/* Small laptops / landscape tablets */
+@media screen and (min-width: 992px){
+    .coverTitle{
+        font-size: 4rem;
+        left: 100px;
+    }
+
+    .projectsTitle {
+        font-size: 4rem;
+        top: 40px;
+        left: 120px;
+    }
+
+    .projectsText {
+        font-size: 1rem;
+        top: 140px;
+        left: 100px;
+    }
+
+    .pageTitle{
+        top: 120px;
+        font-size: 1.5rem;
+        left: 30px;
+        right: 30px;
+    }
+
+    .imgContainer{ 
+        top: 210px; 
+        left: 30px;
+    }
+
+    .scotchTape1{
+        right: -30px;
+        width: 30%;
+    }
+
+    .scotchTape2{
+        left: -50px;
+        bottom: -20px;
+    }
+
+    
+    .scotchTape3{
+        left: -35px;
+    }
+
+    .scotchTape4{
+        right: -50px;
+        bottom: -20px;
+        width: 30%;
+    }
+
+    ul{
+        top: 80px;
+        font-size: 1rem;
+    }
+
+    .stickyNotes{
+        left: 70px;
+        height: 50%;
+    }
+
+    .stickyNotesText{
+        font-size: 1.4rem;
+        top: 350px;
+        left: 160px;
+    }
+
+}
+/* Desktops */
+@media screen and (min-width: 1200px){
+
+}
+/* Large desktops / wide monitors */
+@media screen and (min-width: 1400px){
+
 }

@@ -7,6 +7,8 @@ import keyCaps1 from '../../../assets/keyCaps1.png'
 import keyCaps2 from '../../../assets/keyCaps2.png'
 import keyCaps3 from '../../../assets/keyCaps3.png'
 import GitHubIcon from '@mui/icons-material/GitHub';
+import CopyrightIcon from '@mui/icons-material/Copyright';
+import catLogo from '../../../assets/catLogo.png'
 
 export default function Contact(){
     const [isFooterVisible, setIsFooterVisible] = useState(false)
@@ -29,10 +31,10 @@ export default function Contact(){
             <motion.div 
                 className={styles.headerTitle}
                 initial={{ opacity: 0, y: -50 }}
-                whileInView={{ opacity: 1, y: 0 }}
+                animate={{ opacity: 1, y: 0 }}
                 transition={{ duration: 0.6, ease: "easeOut" }}
-                viewport={{ once: false, amount: 0.3 }}
-            >
+                viewport={{ once: true, amount: 0.1 }}
+                >
                 Let's Connect!
             </motion.div>
 
@@ -110,13 +112,30 @@ export default function Contact(){
             </div>
 
             <motion.div 
-                className={styles.footer}
-                initial={{ opacity: 0 }}
-                animate={isFooterVisible ? { opacity: 1 } : { opacity: 0 }}
-                transition={{ duration: 0.6, delay: isFooterVisible ? 0.5 : 0 }}
-            >
-                <div className={styles.text}>@ copyright</div>
-            </motion.div>
+    className={styles.footer}
+    initial={{ opacity: 0 }}
+    animate={isFooterVisible ? { opacity: 1 } : { opacity: 0 }}
+    transition={{ duration: 0.6, delay: isFooterVisible ? 0.5 : 0 }}
+>
+            <div className={styles.text}> 
+                Copyright <CopyrightIcon 
+                    sx={{ 
+                        marginBottom: {
+                            xs: '-1.8px',
+                            sm: '-8px',
+                            md: '-0px',
+                            lg: '-3px'
+                        },
+                        fontSize: { 
+                            xs: '0.8rem',    
+                            sm: '2.5rem', 
+                            md: '3rem',    
+                            lg: '1rem'  
+                        } 
+                    }}
+                ></CopyrightIcon> jomeorenz 2026. All rights reserved.
+            </div>
+        </motion.div>
         </div>
     )
 }

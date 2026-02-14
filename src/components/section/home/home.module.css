@@ -1,4 +1,7 @@
-
+.mainContainer{
+    overflow-x: hidden; 
+    width: 100%;
+}
 
 .catLogoContainer{
     display: flex;
@@ -8,6 +11,32 @@
 }
 
 .catLogo{
-    height: 15%;
-    width: 15%;
+    height: 50%;
+    width: 50%;
+}
+
+/* larger phones */
+@media screen and (min-width: 576px){
+
+}
+
+/* Tablets / portrait */
+@media screen and (min-width: 768px){
+
+}
+
+/* Small laptops / landscape tablets */
+@media screen and (min-width: 992px){
+    .catLogo{
+        height: 15%;
+        width: 15%;
+    }
+}
+/* Desktops */
+@media screen and (min-width: 1200px){
+
+}
+/* Large desktops / wide monitors */
+@media screen and (min-width: 1400px){
+
 }

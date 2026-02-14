@@ -3,5 +3,32 @@
 .sections{
   flex-direction: column;
   display: flex;
-  gap: 300px;
+  gap: 600px;
+}
+
+/* larger phones */
+@media screen and (min-width: 576px){
+
+}
+
+/* Tablets / portrait */
+@media screen and (min-width: 768px){
+
+}
+
+/* Small laptops / landscape tablets */
+@media screen and (min-width: 992px){
+
+}
+/* Desktops */
+@media screen and (min-width: 1200px){
+  .sections{
+    gap: 300px;
+  }
+}
+/* Large desktops / wide monitors */
+@media screen and (min-width: 1400px){
+  .sections{
+    gap: 400px;
+  }
 }
