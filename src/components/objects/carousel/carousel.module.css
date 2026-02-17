@@ -45,9 +45,6 @@
   transform: scale(1.1);
 }
 
-/* -------------------
-  Indicators
-------------------- */
 .indicatorContainer {
   position: relative;
   display: flex;

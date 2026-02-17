@@ -24,9 +24,6 @@ export default function Carousel({ children: slides }) {
     setIsModalOpen(true)
   }
 
-  // ------------------
-  // TOUCH HANDLERS for modal swipe only
-  // ------------------
   const handleTouchStart = (e) => {
     touchStartX.current = e.touches[0].clientX
   }
@@ -46,7 +43,6 @@ export default function Carousel({ children: slides }) {
   return (
     <>
       <div className={styles.mainContainer}>
-        {/* Carousel slides */}
         <div className={styles.slides} style={{ transform: `translateX(-${curr * 100}%)` }}>
           {slides.map((slide, index) => (
             <div key={index} className={styles.slideItem} onClick={handleImageClick}>
@@ -55,7 +51,6 @@ export default function Carousel({ children: slides }) {
           ))}
         </div>
 
-        {/* Buttons always visible (desktop + mobile) */}
         <div className={styles.buttonContainer}>
           <button onClick={prev} className={styles.button}>
             <ChevronLeft />
@@ -65,7 +60,6 @@ export default function Carousel({ children: slides }) {
           </button>
         </div>
 
-        {/* Indicators */}
         <div className={styles.indicatorContainer}>
           {slides.map((_, i) => (
             <div key={i} className={`${styles.indicator} ${curr === i ? styles.active : ''}`} />
@@ -73,7 +67,6 @@ export default function Carousel({ children: slides }) {
         </div>
       </div>
 
-      {/* Modal */}
       <Modal
         isOpen={isModalOpen}
         onClose={() => setIsModalOpen(false)}
@@ -81,7 +74,6 @@ export default function Carousel({ children: slides }) {
         totalSlides={slides.length}
         onPrev={prev}
         onNext={next}
-        // Pass swipe handlers only to modal
         onTouchStart={handleTouchStart}
         onTouchMove={handleTouchMove}
         onTouchEnd={handleTouchEnd}
